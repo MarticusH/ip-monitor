@@ -36,7 +36,6 @@ def main():
   ipResponse = ((requests.get('https://ifconfig.co/ip')).text).rstrip()
   f.close()
   if currentIP != ipResponse:
-#    print('It is different')
     f = open('./current_ip','w')
     send_email(ipResponse)
     f.write(ipResponse)
